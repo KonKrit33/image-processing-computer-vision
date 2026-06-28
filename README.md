@@ -1,106 +1,117 @@
 # Image Processing & Computer Vision
 
-This repository contains MSc coursework exercises in Image Analysis and Processing, focusing on grayscale transformations, image enhancement, sharpening, edge detection, corner detection, line-angle estimation, object isolation, and image alignment.
+This repository contains a curated portfolio of image processing and computer vision notebooks implemented in Python. The project focuses on classical image enhancement, spatial filtering, edge detection, corner detection, geometric analysis, object isolation, and image alignment.
 
-The project demonstrates practical image-processing workflows using Python and Jupyter notebooks, with input images, intermediate outputs, and final processed results.
+The notebooks demonstrate practical workflows for transforming raw visual data into enhanced, interpretable, and analysis-ready images using Python-based image processing techniques.
 
 ## Project Overview
 
-The repository includes seven exercises covering fundamental techniques in digital image processing and computer vision.
+The repository includes seven independent notebooks covering fundamental techniques in digital image processing and computer vision.
 
-### Exercise 1: Grayscale Intensity Transformation
+Each notebook focuses on a specific visual analysis task, starting from image loading and preprocessing and progressing toward enhancement, feature extraction, geometric interpretation, or object isolation.
 
-This exercise studies the effect of a transformation function on a grayscale image.
+## Included Notebooks
 
-The analysis includes:
+### 1. Gray-Level Image Transformation
 
-- Interpretation of the transformation function
-- Effect on image intensity values
-- Effect on perceived brightness
-- Application of the transformation to a grayscale image
-- Visual comparison between input and output images
-
-### Exercise 2: Low-Light Image Enhancement
-
-This exercise focuses on enhancing a dark forest image in terms of perceived light and color.
+This notebook studies the effect of a grayscale intensity transformation on image brightness and contrast.
 
 The analysis includes:
 
-- Brightness enhancement
-- Contrast improvement
-- Color correction
-- Visual assessment of the enhanced result
+* Interpretation of a transformation function
+* Mapping of input intensity values to output intensity values
+* Effect on perceived image brightness
+* Application of the transformation to a grayscale image
+* Visual comparison between the original and transformed images
 
-### Exercise 3: Brightness Enhancement
+### 2. Low-Light Image Enhancement
 
-This exercise focuses on improving the perceived brightness of a pollen image.
-
-The analysis includes:
-
-- Brightness correction
-- Intensity adjustment
-- Contrast-aware enhancement
-- Comparison of the original and enhanced image
-
-### Exercise 4: Image Sharpening
-
-This exercise focuses on sharpening an image of the Moon.
+This notebook applies image enhancement techniques to improve the visual quality of a low-light natural image.
 
 The analysis includes:
 
-- Spatial sharpening
-- Unsharp masking
-- Enhancement of image details
-- Visual comparison before and after sharpening
+* Brightness enhancement
+* Contrast improvement
+* Color correction
+* Local illumination adjustment
+* Visual assessment of the enhanced output
 
-### Exercise 5: Combined Spatial Enhancement Pipeline
+### 3. Pollen Image Brightness Enhancement
 
-This exercise studies how one image may have been transformed into another using combined spatial enhancement methods.
-
-The analysis includes:
-
-- Reverse engineering of the image enhancement pipeline
-- Brightness and dynamic-range analysis
-- Noise interpretation
-- Use of arithmetic operations, gray-level transformations, and spatial filters
-- Approximation of the original image from the enhanced version
-
-### Exercise 6: Edge Detection, Angle Estimation, and Corner Detection
-
-This exercise analyzes an image of a house.
+This notebook applies intensity transformation techniques to improve the perceived brightness of a grayscale microscopy image.
 
 The analysis includes:
 
-- Detection of main image edges
-- Estimation of the angle of diagonal roof edges
-- Corner detection
-- Localization of windows based on detected corners
+* Brightness correction
+* Gamma correction / power-law transformation
+* Intensity adjustment
+* Preservation of structural details
+* Comparison between the original and enhanced image
 
-### Exercise 7: Line Detection, Rotation, and Image Combination
+### 4. Moon Image Sharpening
 
-This exercise analyzes billiard images to estimate cue orientation and combine image information.
+This notebook applies spatial-domain sharpening techniques to enhance fine structural details in a lunar surface image.
 
 The analysis includes:
 
-- Detection of the billiard cue as a long straight object
-- Estimation of cue angle with respect to the horizontal axis
-- Image rotation to verify the estimated angle
-- Binary masking and object isolation
-- Separation of the cue from connected objects
-- Combination of two images to approximate a target result
+* Spatial filtering
+* Unsharp masking
+* Detail enhancement
+* Edge and texture sharpening
+* Visual comparison before and after sharpening
+
+### 5. X-Ray Image Enhancement and Restoration
+
+This notebook explores forward and inverse image processing pipelines for X-ray image enhancement and approximate restoration.
+
+The analysis includes:
+
+* Estimation of a forward enhancement pipeline
+* Brightness and dynamic-range analysis
+* Noise interpretation
+* Spatial filtering
+* Gray-level transformations
+* Approximate inverse restoration from an enhanced image
+
+### 6. Edge, Line, Corner and Window Detection
+
+This notebook applies classical computer vision techniques to analyze a structured architectural image.
+
+The analysis includes:
+
+* Main edge detection
+* Roof-angle estimation using line detection
+* Harris corner detection
+* Non-maximum suppression
+* Region-of-interest filtering
+* Window localization based on detected corner points
+
+### 7. Billiard Cue Detection and Isolation
+
+This notebook applies geometric image analysis and object isolation techniques to billiard images.
+
+The analysis includes:
+
+* Detection of the billiard cue as a dominant straight object
+* Cue-angle estimation with respect to the horizontal axis
+* Image rotation for geometric verification
+* Binary masking
+* Object isolation
+* Separation of the cue from connected objects
+* Image combination to approximate a target output
 
 ## Repository Structure
 
 ```text
 .
 ├── notebooks/
-│   ├── Ex_1.ipynb
-│   ├── Ex_2.ipynb
-│   ├── Ex_3.ipynb
-│   ├── Ex_4.ipynb
-│   ├── Ex_5.ipynb
-│   ├── Ex_6.ipynb
-│   └── Ex_7.ipynb
+│   ├── 01_gray_level_image_transformation.ipynb
+│   ├── 02_low_light_image_enhancement.ipynb
+│   ├── 03_pollen_image_brightness_enhancement.ipynb
+│   ├── 04_moon_image_sharpening.ipynb
+│   ├── 05_xray_image_enhancement_restoration.ipynb
+│   ├── 06_edge_line_corner_window_detection.ipynb
+│   └── 07_billiard_cue_detection_isolation.ipynb
 │
 ├── images/
 │   ├── input/
@@ -125,53 +136,44 @@ The analysis includes:
 └── .gitignore
 ```
 
-## Included Notebooks
-
-- `Ex_1.ipynb`: Grayscale intensity transformation and brightness interpretation.
-- `Ex_2.ipynb`: Enhancement of a dark forest image.
-- `Ex_3.ipynb`: Brightness enhancement of a pollen image.
-- `Ex_4.ipynb`: Sharpening of a Moon image using spatial filtering.
-- `Ex_5.ipynb`: Combined spatial enhancement and reverse image-processing pipeline.
-- `Ex_6.ipynb`: Edge detection, roof-angle estimation, corner detection, and window localization.
-- `Ex_7.ipynb`: Billiard cue angle estimation, image rotation, cue isolation, and image combination.
-
 ## Tools and Technologies
 
-- Python
-- Jupyter Notebook
-- NumPy
-- OpenCV
-- Matplotlib
-- scikit-image
-- Image intensity transformations
-- Histogram and brightness adjustment
-- Spatial filtering
-- Sharpening filters
-- Unsharp masking
-- Edge detection
-- Corner detection
-- Binary masks
-- Morphological operations
-- Line-angle estimation
-- Image rotation
-- Image alignment and combination
+* Python
+* Jupyter Notebook
+* NumPy
+* OpenCV
+* Matplotlib
+* scikit-image
+* Grayscale intensity transformations
+* Gamma correction
+* Histogram and brightness adjustment
+* Spatial filtering
+* Sharpening filters
+* Unsharp masking
+* Edge detection
+* Hough line transform
+* Harris corner detection
+* Binary masking
+* Morphological operations
+* Image rotation
+* Image alignment and combination
 
-## Relevance
+## Technical Relevance
 
-This repository demonstrates practical skills in image analysis and computer vision, including low-level image enhancement, spatial filtering, feature detection, geometric transformation, and object isolation.
+This repository demonstrates practical skills in image analysis and computer vision, including low-level image enhancement, spatial-domain filtering, feature detection, geometric transformation, and object isolation.
 
-The work is relevant to:
+The workflows are relevant to:
 
-- Computer vision pipelines
-- Scientific image analysis
-- Biomedical image preprocessing
-- Industrial visual inspection
-- Image enhancement and restoration
-- Feature extraction from visual data
-- AI-ready image preprocessing workflows
+* Computer vision pipelines
+* Scientific image analysis
+* Biomedical image preprocessing
+* Industrial visual inspection
+* Image enhancement and restoration
+* Feature extraction from visual data
+* AI-ready image preprocessing workflows
 
 ## Notes
 
 The repository contains Jupyter notebooks, input images, and selected output images. Temporary files, cache folders, system-generated files, and local machine-specific files are intentionally excluded.
 
-If running the notebooks locally, make sure that relative paths are preserved according to the repository structure.
+All notebooks use relative paths so that the repository can be cloned and executed locally while preserving the folder structure.
